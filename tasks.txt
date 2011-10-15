@@ -1,0 +1,43 @@
+OK acrescentar consts para flags
+-  criacao icones
+
+*** Aqui já é possível lancar no market!
+- permitir visualizacao e edicao de cada item:
+  - Data
+    - View: uri, inferred file name, inferred mime type
+    - Editar texto da URI. Inferred file name e mime type vão pra null.
+    - Substituir mime type do intent pelo inferred mime type.
+  - Mime type:
+    - View
+    - Possibilidade de editar textualmente o mime type.
+    - Possibilidade de escolher o mime type em uma lista.
+  - Action:
+    - View
+    - Possibilidade de editar textualmente a action.
+    - Possibilidade de escolher a action em uma lista.
+  - Categories:
+    - View: lista de categorias
+    - Adicionar categoria: texto e lista
+    - Editar categoria
+    - Remover categoria
+  - Extras:
+    - View: lista chave/valor
+    - Adicionar extras: chave texto ou lista, valor texto
+    - Editar extra
+    - Remover extras
+  - Flags:
+    - View inteiro e lista de flags
+    - Adicionar flag de lista
+    - Remover flag
+  - Component:
+     - View package e component name
+     - Editar package e component name
+- itens de menu: reset
+- geracao de intents na home screen
+- plugin para inferir file name de "content"
+- plugin para inferir file name de "gmail"
+- fazer download de URIs HTTP e HTTPS.
+- Salvar conteúdo de texto em arquivos texto.
+- Ajeitar home screen
+- criar about screen
+- criar mecanismo de captura de broadcast intents

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- General strings -->
+    <string name="app_name">Intentional</string>
+
+    <!-- Intent view strings -->
+    <string name="intent_title_data">Data</string>
+    <string name="intent_title_mime_type">Mime Type</string>
+    <string name="intent_title_action">Action</string>
+    <string name="intent_title_categories">Categories</string>
+    <string name="intent_title_extras">Extras</string>
+    <string name="intent_title_flags">Flags</string>
+    <string name="intent_title_component">Component</string>
+    <string name="intent_summary_empty">[none]</string>
+    <string name="intent_summary_more">(more)</string>
+    <string name="intent_summary_x_more">(%d more)</string>
+    <string name="intent_menu_item_forward">"Forward"</string>
+    <string name="intent_menu_item_share">"Share"</string>
+    <string name="intent_menu_item_save">"Save"</string>
+
+    <!-- Save dialog strings -->
+    <string name="dialog_save_title">Save Data</string>
+    <string name="dialog_save_message">Enter destination path:</string>
+    <string name="dialog_save_cancel_button">Cancel</string>
+    <string name="dialog_save_save_button">Save</string>
+    <string name="dialog_save_success_message">Intent data saved successfully.</string>
+    <string name="dialog_save_empty_path_message">Destination file path cannot be empty.</string>
+    <string name="dialog_save_not_found_message">Could not open intent data stream.</string>
+    <string name="dialog_save_io_error_message">Error saving intent data stream.</string>
+
+    <!-- Data view strings -->
+    <string name="data_view_title"><u>Data</u></string>
+</resources>

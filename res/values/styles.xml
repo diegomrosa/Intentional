@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-    <style name="FieldViewTitle">
-        <item name="android:layout_width">fill_parent</item>
+    <style name="intentRowTitle">
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">20sp</item>
-        <item name="android:typeface">sans</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="intentRowValue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:maxLines">4</item>
+    </style>
+    <style name="fieldViewTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
         <item name="android:textSize">32sp</item>
         <item name="android:textStyle">bold</item>
     </style>
-    <style name="FieldViewValue">
-        <item name="android:layout_width">fill_parent</item>
+    <style name="dataEdit">
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">5sp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
     </style>
 </resources>

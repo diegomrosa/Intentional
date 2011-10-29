@@ -8,9 +8,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceScreen;
+import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -20,59 +18,48 @@ import android.widget.Toast;
 
 import java.io.*;
 
-public class ViewIntentActivity extends PreferenceActivity {
+public class ViewIntentActivity extends FragmentActivity {
     private static final String TAG = ViewIntentActivity.class.getSimpleName();
 
+    private static final String INTENT_EXT_KEY = "intentExt";
     private static final int BUFFER_SIZE = 8192;
-
-    private static final String PREF_KEY_DATA = "data";
-    private static final String PREF_KEY_MIME_TYPE = "mimeType";
-    private static final String PREF_KEY_ACTION = "action";
-    private static final String PREF_KEY_CATEGORIES = "categories";
-    private static final String PREF_KEY_EXTRAS = "extras";
-    private static final String PREF_KEY_FLAGS = "flags";
-    private static final String PREF_KEY_COMPONENT = "component";
-
     private static final int DIALOG_ID_SAVE = 0;
 
-    private static final int EDIT_DATA_REQUEST = 0;
-
-    private IntentExt intentExt;
+    private IntentAdapter intentAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.addPreferencesFromResource(R.xml.intent_preferences);
-        Intent originalIntent = getIntent();
+        super.setContentView(R.layout.view_intent_activity);
+        if (savedInstanceState != null) {
+            IntentExt savedIntent = savedInstanceState.getParcelable(INTENT_EXT_KEY);
 
-        Log.d(TAG, "act created.");
-        if (originalIntent != null) {
-            intentExt = new IntentExt(originalIntent);
-            populateFields();
+            if (savedIntent != null) {
+                intentAdapter = new IntentAdapter(this, savedIntent);
+            }
+        } else {
+            Intent originalIntent = getIntent();
+
+            if (originalIntent != null) {
+                intentAdapter = new IntentAdapter(this, new IntentExt(originalIntent));
+            }
         }
     }
 
-    private void populateFields() {
-        DisplayableIntentExt die = new DisplayableIntentExt(this, intentExt);
-        PreferenceScreen screen = getPreferenceScreen();
+    public IntentAdapter getAdapter() {
+        return intentAdapter;
+    }
 
-        screen.findPreference(PREF_KEY_DATA).setSummary(die.getUriString());
-        screen.findPreference(PREF_KEY_MIME_TYPE).setSummary(die.getMimeTypeString());
-        screen.findPreference(PREF_KEY_ACTION).setSummary(die.getActionString());
-        screen.findPreference(PREF_KEY_CATEGORIES).setSummary(die.getCategoriesString());
-        screen.findPreference(PREF_KEY_EXTRAS).setSummary(die.getExtrasString());
-        screen.findPreference(PREF_KEY_FLAGS).setSummary(die.getFlagsString());
-        screen.findPreference(PREF_KEY_COMPONENT).setSummary(die.getComponentString());
+    public IntentExt getIntentExt() {
+        return (intentAdapter == null) ? null : intentAdapter.getIntentExt();
     }
 
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen screen, Preference pref) {
-        Log.d(TAG, "List item clicked.");
-        if (PREF_KEY_DATA.equals(pref.getKey())) {
-            startActivityForResult(new Intent(
-                    ViewIntentActivity.this, ViewDataActivity.class), EDIT_DATA_REQUEST);
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        if (getAdapter() != null) {
+            savedInstanceState.putParcelable(INTENT_EXT_KEY, getIntentExt());
         }
-        return true;
     }
 
     @Override
@@ -87,9 +74,9 @@ public class ViewIntentActivity extends PreferenceActivity {
         MenuItem shareItem = menu.findItem(R.id.menu_item_share);
         MenuItem saveItem = menu.findItem(R.id.menu_item_save);
 
-        if (intentExt != null) {
+        if (getAdapter() != null) {
             forwardItem.setEnabled(true);
-            if (intentExt.getDataStream() != null) {
+            if (getIntentExt().getDataStream() != null) {
                 shareItem.setEnabled(true);
                 saveItem.setEnabled(true);
             } else {
@@ -108,10 +95,10 @@ public class ViewIntentActivity extends PreferenceActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
         case R.id.menu_item_forward:
-            startActivity(intentExt.getUpdatedIntent());
+            startActivity(getIntentExt().getUpdatedIntent());
             break;
         case R.id.menu_item_share:
-            startActivity(intentExt.getShareIntent());
+            startActivity(getIntentExt().getShareIntent());
             break;
         case R.id.menu_item_save:
             showDialog(DIALOG_ID_SAVE);
@@ -180,7 +167,7 @@ public class ViewIntentActivity extends PreferenceActivity {
 
     private void saveDataTo(String path) throws FileNotFoundException, IOException {
         ContentResolver cr = getContentResolver();
-        Uri data = intentExt.getDataStream();
+        Uri data = getIntentExt().getDataStream();
         byte[] buffer = new byte[BUFFER_SIZE];
         int bytesRead = 0;
         InputStream is = cr.openInputStream(data);

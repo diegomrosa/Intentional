@@ -6,8 +6,9 @@
     <string name="app_name">Intentional</string>
 
     <!-- Intent view strings -->
+    <string name="intent_error">Error processing intent.</string>
     <string name="intent_title_data">Data</string>
-    <string name="intent_title_mime_type">Mime Type</string>
+    <string name="intent_title_type">Mime Type</string>
     <string name="intent_title_action">Action</string>
     <string name="intent_title_categories">Categories</string>
     <string name="intent_title_extras">Extras</string>

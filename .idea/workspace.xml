@@ -59,37 +59,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="view_data_activity.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/view_data_activity.xml">
+      <file leaf-file-name="field_data_fragment.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/field_data_fragment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
+            <state line="11" column="37" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewDataActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/ViewDataActivity.java">
+      <file leaf-file-name="FieldDataFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldDataFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
+            <state line="38" column="0" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view_intent_row.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/view_intent_row.xml">
+      <file leaf-file-name="FieldFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="12" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+            <state line="7" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README">
+      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.055555556">
+            <state line="1" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,16 +98,58 @@
       <file leaf-file-name="ViewIntentActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/ViewIntentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="0" selection-start="6570" selection-end="6570" vertical-scroll-proportion="0.0">
+            <state line="169" column="19" selection-start="5828" selection-end="5828" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FieldDetailsActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldDetailsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="6" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FieldListFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldListFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="93" column="53" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.2542373">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="62" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
+            <state line="19" column="0" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntentAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/IntentAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="18" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntentExt.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/IntentExt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="13" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,22 +169,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/menu/intent_menu.xml" />
-        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/Flag.java" />
-        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/FlagIterator.java" />
-        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/DisplayableIntentExt.java" />
-        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/Flags.java" />
-        <option value="$PROJECT_DIR$/tasks.txt" />
-        <option value="$PROJECT_DIR$/res/xml/intent_preferences.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/IntentAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/view_intent_row.xml" />
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/layout/view_data_activity.xml" />
-        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/ViewIntentActivity.java" />
         <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/ViewDataActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/view_intent_row.xml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/res/layout/view_intent_activity.xml" />
+        <option value="$PROJECT_DIR$/res/layout-land/view_intent_activity.xml" />
+        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldDetailsActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/field_data_fragment.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/Constants.java" />
+        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldDataFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/ViewIntentActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldListFragment.java" />
       </list>
     </option>
   </component>
@@ -185,6 +227,10 @@
               <option name="myItemId" value="Intentional" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -193,6 +239,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Intentional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Intentional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Intentional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intentional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Intentional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Intentional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -235,7 +317,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -251,7 +333,12 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.diegomrosa.intentional" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libs" />
+      <recent name="$PROJECT_DIR$/res/layout-land" />
       <recent name="$PROJECT_DIR$/res/layout" />
     </key>
   </component>
@@ -430,22 +517,22 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42105263" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25127333" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27944762" sideWeight="0.8183362" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18166384" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18166384" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33052278" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33052278" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -497,29 +584,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/DisplayableIntentExt.java">
+    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/FlagIterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="9" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/Flags.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="40" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/home_activity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1723" selection-end="1723" vertical-scroll-proportion="0.0" />
+        <state line="4" column="6" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/HomeActivity.java">
@@ -527,58 +596,106 @@
         <state line="10" column="47" selection-start="178" selection-end="298" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/xml/intent_preferences.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/field_list_fragment.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/view_intent_activity.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" />
+        <state line="9" column="0" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Devel/android-sdk-mac_x86/extras/android/compatibility/v4/android-support-v4.jar!/android/support/v4/app/Fragment.class">
+    <entry file="file://$PROJECT_DIR$/res/layout-land/view_intent_activity.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.10843374" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/view_data_activity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/ViewDataActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/ViewIntentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="0" selection-start="6570" selection-end="6570" vertical-scroll-proportion="0.0" />
+        <state line="14" column="0" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="62" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="12" selection-end="12" vertical-scroll-proportion="0.083333336">
+        <state line="23" column="12" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/view_intent_row.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/IntentExt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+        <state line="14" column="13" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.055555556">
+        <state line="19" column="0" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/field_data_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="37" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/IntentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="18" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldDetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="6" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldDataFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/ViewIntentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="19" selection-start="5828" selection-end="5828" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/diegomrosa/intentional/FieldListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="53" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.2542373">
           <folding />
         </state>
       </provider>
@@ -627,7 +744,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2337963" />
               </list>
             </option>
           </splitter-proportions>
@@ -635,7 +752,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Intentional</last-edited>
+          <last-edited>Android|Intentional</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -658,6 +775,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Compatibility v4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

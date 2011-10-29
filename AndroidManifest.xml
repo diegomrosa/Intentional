@@ -5,6 +5,9 @@
         android:versionCode="1"
         android:versionName="1.0">
 
+    <uses-sdk android:minSdkVersion="7"
+        android:targetSdkVersion="10" />
+
     <application android:label="@string/app_name" android:icon="@drawable/icon">
 
         <activity android:name=".HomeActivity"
@@ -15,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ViewDataActivity" />
+        <activity android:name=".FieldDetailsActivity" />
 
         <activity android:name=".ViewIntentActivity"
                 android:label="View Intent">
@@ -27,7 +30,7 @@
                 <category android:name="android.intent.category.TAB" />
                 <category android:name="android.intent.category.ALTERNATIVE" />
                 <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
                 <category android:name="android.intent.category.INFO" />
                 <!-- <category android:name="android.intent.category.HOME" /> -->
                 <category android:name="android.intent.category.PREFERENCE" />
@@ -74,7 +77,7 @@
                 <category android:name="android.intent.category.TAB" />
                 <category android:name="android.intent.category.ALTERNATIVE" />
                 <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
                 <category android:name="android.intent.category.INFO" />
                 <!-- <category android:name="android.intent.category.HOME" /> -->
                 <category android:name="android.intent.category.PREFERENCE" />
@@ -124,7 +127,7 @@
                 <category android:name="android.intent.category.TAB" />
                 <category android:name="android.intent.category.ALTERNATIVE" />
                 <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
                 <category android:name="android.intent.category.INFO" />
                 <!-- <category android:name="android.intent.category.HOME" /> -->
                 <category android:name="android.intent.category.PREFERENCE" />

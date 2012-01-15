@@ -5,11 +5,11 @@
         android:layout_width="match_parent" android:layout_height="match_parent">
     <fragment class="com.diegomrosa.intentional.FieldListFragment"
             android:id="@+id/fieldList"
-            android:layout_weight="1"
+            android:layout_weight="0.4"
             android:layout_width="0px"
             android:layout_height="match_parent" />
     <FrameLayout android:id="@+id/fieldDetails"
-            android:layout_weight="1"
+            android:layout_weight="0.6"
             android:layout_width="0px"
             android:layout_height="match_parent" />
 </LinearLayout>

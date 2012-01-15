@@ -1,4 +1,3 @@
-OK acrescentar consts para flags
 -  criacao icones
 
 *** Aqui já é possível lancar no market!
@@ -32,12 +31,15 @@ OK acrescentar consts para flags
   - Component:
      - View package e component name
      - Editar package e component name
+- itens action bar: forward, share, save, bookmark
 - itens de menu: reset
 - geracao de intents na home screen
-- plugin para inferir file name de "content"
+- antever extensão do arquivo no save
+- plugin para inferir file name de "content:media"
 - plugin para inferir file name de "gmail"
 - fazer download de URIs HTTP e HTTPS.
 - Salvar conteúdo de texto em arquivos texto.
 - Ajeitar home screen
 - criar about screen
 - criar mecanismo de captura de broadcast intents
+- separar strings não traduzíveis

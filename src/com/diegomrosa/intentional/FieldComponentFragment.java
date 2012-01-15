@@ -1,20 +1,18 @@
 package com.diegomrosa.intentional;
 
-import android.content.Intent;
-import android.net.Uri;
+import android.content.ComponentName;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-public class FieldDataFragment extends FieldFragment {
+public class FieldComponentFragment extends FieldFragment {
     private View view;
 
     @Override
     public int getIndex() {
-        return Constants.DATA_IDX;
+        return Constants.COMPONENT_IDX;
     }
 
     @Override
@@ -31,13 +29,16 @@ public class FieldDataFragment extends FieldFragment {
             // the view hierarchy; it would just never be used.
             return null;
         }
-        view = inflater.inflate(R.layout.field_data_fragment, null);
-        EditText valueEdit = (EditText) view.findViewById(R.id.dataFieldValue);
+        view = inflater.inflate(R.layout.field_component_fragment, null);
+        EditText packageEdit = (EditText) view.findViewById(R.id.componentPackageEdit);
+        EditText classEdit = (EditText) view.findViewById(R.id.componentClassEdit);
         IntentExt intentExt = getIntentExt();
-        Uri data = (intentExt == null) ? null : intentExt.getData();
-        String dataString = (data == null) ? null : data.toString();
+        ComponentName component = (intentExt == null) ? null : intentExt.getComponent();
+        String packageString = (component == null) ? null : component.getPackageName();
+        String classString = (component == null) ? null : component.getClassName();
 
-        valueEdit.setText(dataString);
+        packageEdit.setText(packageString);
+        classEdit.setText(classString);
         return view;
     }
 }

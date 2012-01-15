@@ -73,9 +73,11 @@ public class ViewIntentActivity extends FragmentActivity {
         MenuItem forwardItem = menu.findItem(R.id.menu_item_forward);
         MenuItem shareItem = menu.findItem(R.id.menu_item_share);
         MenuItem saveItem = menu.findItem(R.id.menu_item_save);
+        MenuItem bookmarkItem = menu.findItem(R.id.menu_item_bookmark);
 
         if (getAdapter() != null) {
             forwardItem.setEnabled(true);
+            bookmarkItem.setEnabled(true);
             if (getIntentExt().getDataStream() != null) {
                 shareItem.setEnabled(true);
                 saveItem.setEnabled(true);
@@ -87,6 +89,7 @@ public class ViewIntentActivity extends FragmentActivity {
             forwardItem.setEnabled(false);
             shareItem.setEnabled(false);
             saveItem.setEnabled(false);
+            bookmarkItem.setEnabled(false);
         }
         return true;
     }
@@ -102,6 +105,9 @@ public class ViewIntentActivity extends FragmentActivity {
             break;
         case R.id.menu_item_save:
             showDialog(DIALOG_ID_SAVE);
+            break;
+        case R.id.menu_item_bookmark:
+            bookmarkIntent();
             break;
         default:
             Log.e(TAG, "Unexpected option item id: " + item.getItemId());
@@ -132,7 +138,7 @@ public class ViewIntentActivity extends FragmentActivity {
         if (Environment.MEDIA_MOUNTED.equals(storageState)) {
             initialDir = Environment.getExternalStorageDirectory();
         }
-        edit.setText(initialDir.getAbsolutePath());
+        edit.setText(initialDir.getAbsolutePath() + "/");
         builder.setView(edit);
         builder.setNegativeButton(R.string.dialog_save_cancel_button, new DialogInterface.OnClickListener() {
 
@@ -188,6 +194,17 @@ public class ViewIntentActivity extends FragmentActivity {
             if (os != null) {
                 os.close();
             }
+        }
+    }
+
+    private void bookmarkIntent() {
+        Intent updatedIntent = getIntentExt().getUpdatedIntent();
+
+        try {
+            // Save intent to database here.
+            showLongToast(R.string.intent_bookmark_succeeded);
+        } catch (Exception exc) {
+            showLongToast(R.string.intent_bookmark_failed);
         }
     }
 

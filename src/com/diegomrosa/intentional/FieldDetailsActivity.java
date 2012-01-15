@@ -3,9 +3,12 @@ package com.diegomrosa.intentional;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 
 public class FieldDetailsActivity extends FragmentActivity {
+    private static final String TAG = FieldDetailsActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +23,12 @@ public class FieldDetailsActivity extends FragmentActivity {
         }
         if (savedInstanceState == null) {
 
-            // During initial setup, plug in the details fragment.
-            // TODO: create the right fragment.
-            FieldFragment fieldDetails = new FieldDataFragment();
+            // During initial setup, plug in the corresponding fragment.
+            Bundle extras = getIntent().getExtras();
+            int index = extras.getInt(Constants.FIELD_INDEX_EXTRA, -1);
+            Fragment fieldFragment = FieldFragment.getFragment(index, extras);
 
-            fieldDetails.setArguments(getIntent().getExtras());
-            getSupportFragmentManager().beginTransaction().add(android.R.id.content, fieldDetails).commit();
+            getSupportFragmentManager().beginTransaction().add(android.R.id.content, fieldFragment).commit();
         }
     }
 }

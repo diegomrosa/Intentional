@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <TextView style="@style/fieldViewTitle"
+            android:text="@string/component_view_title" />
+    <TextView style="@style/fieldViewLabel"
+            android:text="@string/component_package_label" />
+    <EditText android:id="@+id/componentPackageEdit"
+            style="@style/fieldViewEdit"
+            android:text=""
+            android:editable="false" />
+    <TextView style="@style/fieldViewLabel"
+            android:text="@string/component_class_label" />
+    <EditText android:id="@+id/componentClassEdit"
+            style="@style/fieldViewEdit"
+            android:text=""
+            android:editable="false" />
+</LinearLayout>

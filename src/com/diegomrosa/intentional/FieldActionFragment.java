@@ -1,20 +1,17 @@
 package com.diegomrosa.intentional;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-public class FieldDataFragment extends FieldFragment {
+public class FieldActionFragment extends FieldFragment {
     private View view;
 
     @Override
     public int getIndex() {
-        return Constants.DATA_IDX;
+        return Constants.ACTION_IDX;
     }
 
     @Override
@@ -31,13 +28,12 @@ public class FieldDataFragment extends FieldFragment {
             // the view hierarchy; it would just never be used.
             return null;
         }
-        view = inflater.inflate(R.layout.field_data_fragment, null);
-        EditText valueEdit = (EditText) view.findViewById(R.id.dataFieldValue);
+        view = inflater.inflate(R.layout.field_action_fragment, null);
+        EditText valueEdit = (EditText) view.findViewById(R.id.actionFieldValue);
         IntentExt intentExt = getIntentExt();
-        Uri data = (intentExt == null) ? null : intentExt.getData();
-        String dataString = (data == null) ? null : data.toString();
+        String action = (intentExt == null) ? null : intentExt.getAction();
 
-        valueEdit.setText(dataString);
+        valueEdit.setText(action);
         return view;
     }
 }

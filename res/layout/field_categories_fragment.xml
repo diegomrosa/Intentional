@@ -6,14 +6,15 @@
         android:orientation="vertical"
         android:paddingLeft="8dp"
         android:paddingRight="8dp">
+    <TextView style="@style/fieldViewTitle"
+            android:text="@string/categories_view_title" />
     <ListView android:id="@android:id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawSelectorOnTop="false" />
     <TextView android:id="@android:id/empty"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:background="#FF0000"
-             android:text="@string/intent_error"
-             android:visibility="invisible" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/categories_empty_list"
+            android:visibility="invisible" />
 </LinearLayout>

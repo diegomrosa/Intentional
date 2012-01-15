@@ -1,20 +1,20 @@
 package com.diegomrosa.intentional;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
+import android.widget.ArrayAdapter;
 
-public class FieldDataFragment extends FieldFragment {
+import java.util.Iterator;
+import java.util.Set;
+
+public class FieldExtrasFragment extends ListFieldFragment {
     private View view;
 
     @Override
     public int getIndex() {
-        return Constants.DATA_IDX;
+        return Constants.EXTRAS_IDX;
     }
 
     @Override
@@ -31,13 +31,13 @@ public class FieldDataFragment extends FieldFragment {
             // the view hierarchy; it would just never be used.
             return null;
         }
-        view = inflater.inflate(R.layout.field_data_fragment, null);
-        EditText valueEdit = (EditText) view.findViewById(R.id.dataFieldValue);
+        view = inflater.inflate(R.layout.field_extras_fragment, null);
         IntentExt intentExt = getIntentExt();
-        Uri data = (intentExt == null) ? null : intentExt.getData();
-        String dataString = (data == null) ? null : data.toString();
+        Bundle extras = intentExt.getExtras();
 
-        valueEdit.setText(dataString);
+        if ((extras != null) && !extras.isEmpty()) {
+            setListAdapter(new BundleAdapter(getActivity(), extras));
+        }
         return view;
     }
 }

@@ -1,27 +1,12 @@
 package com.diegomrosa.intentional;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.ListActivity;
-import android.content.ContentResolver;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
-import android.text.TextUtils;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import java.io.*;
 
 public class FieldListFragment extends ListFragment {
     private static final String CURRENT_SELECTED_FIELD_KEY = "currentSelectedField";
@@ -82,21 +67,15 @@ public class FieldListFragment extends ListFragment {
             getListView().setItemChecked(index, true);
 
             // Check what fragment is currently shown, replace if needed.
-            FieldFragment fieldDetails = (FieldDataFragment)
-                    getFragmentManager().findFragmentById(R.id.fieldDetails);
+            Fragment fieldFragment = (Fragment) getFragmentManager().findFragmentById(R.id.fieldDetails);
 
-            if ((fieldDetails == null) || (fieldDetails.getIndex() != index)) {
-
-                // Make new fragment to show this selection.
-                fieldDetails = new FieldDataFragment();
-                Bundle arguments = new Bundle();
-                arguments.putParcelable(Constants.INTENT_EXT_EXTRA, getIntentExt());
-                fieldDetails.setArguments(arguments);
+            if ((fieldFragment == null) || (((FieldFragmentFace) fieldFragment).getIndex() != index)) {
+                fieldFragment = FieldFragment.getFragment(index, getIntentExt());
 
                 // Execute a transaction, replacing any existing fragment
                 // with this one inside the frame.
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.fieldDetails, fieldDetails);
+                ft.replace(R.id.fieldDetails, fieldFragment);
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 ft.commit();
             }
@@ -108,6 +87,7 @@ public class FieldListFragment extends ListFragment {
 
             intent.setClass(getActivity(), FieldDetailsActivity.class);
             intent.putExtra(Constants.INTENT_EXT_EXTRA, getIntentExt());
+            intent.putExtra(Constants.FIELD_INDEX_EXTRA, Integer.valueOf(index));
             startActivity(intent);
         }
     }

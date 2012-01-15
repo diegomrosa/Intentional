@@ -11,19 +11,10 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 class IntentAdapter extends BaseAdapter {
-    private static final int COUNT = 7;
-
-    public static final int DATA_IDX = 0;
-    public static final int TYPE_IDX = 1;
-    public static final int ACTION_IDX = 2;
-    public static final int CATEGORIES_IDX = 3;
-    public static final int EXTRAS_IDX = 4;
-    public static final int FLAGS_IDX = 5;
-    public static final int COMPONENT_IDX = 6;
-
     private static final int[] TITLES = {
             R.string.intent_title_data,
             R.string.intent_title_type,
@@ -47,25 +38,25 @@ class IntentAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return COUNT;
+        return Constants.FIELD_COUNT;
     }
 
     @Override
     public Object getItem(int i) {
         switch (i) {
-        case DATA_IDX:
+        case Constants.DATA_IDX:
             return getDataString();
-        case TYPE_IDX:
+        case Constants.TYPE_IDX:
             return getTypeString();
-        case ACTION_IDX:
+        case Constants.ACTION_IDX:
             return getActionString();
-        case CATEGORIES_IDX:
+        case Constants.CATEGORIES_IDX:
             return getCategoriesString();
-        case EXTRAS_IDX:
+        case Constants.EXTRAS_IDX:
             return getExtrasString();
-        case FLAGS_IDX:
+        case Constants.FLAGS_IDX:
             return getFlagsString();
-        case COMPONENT_IDX:
+        case Constants.COMPONENT_IDX:
             return getComponentString();
         default:
             throw new IllegalArgumentException("Invalid intent field: " + i);
@@ -81,13 +72,13 @@ class IntentAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         View fieldView = view;
 
-        if ((fieldView == null) || (fieldView.getId() != R.layout.field_row)) {
+        if ((fieldView == null) || (fieldView.getId() != R.layout.double_line_row)) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            fieldView = inflater.inflate(R.layout.field_row, null);
+            fieldView = inflater.inflate(R.layout.double_line_row, null);
         }
-        TextView titleView = (TextView) fieldView.findViewById(R.id.intentRowTitle);
-        TextView valueView = (TextView) fieldView.findViewById(R.id.intentRowValue);
+        TextView titleView = (TextView) fieldView.findViewById(R.id.rowTitle);
+        TextView valueView = (TextView) fieldView.findViewById(R.id.rowValue);
 
         titleView.setText(context.getString(TITLES[i]));
         valueView.setText((String) getItem(i));
@@ -147,11 +138,11 @@ class IntentAdapter extends BaseAdapter {
         if (flags == 0) {
             return getEmptySummary();
         }
-        Iterator<Integer> flagIterator = Flags.iterator(flags);
-        StringBuilder builder = new StringBuilder(Flags.toString(flagIterator.next().intValue()));
+        Flag[] flagArray = Flag.toArray(flags);
+        StringBuilder builder = new StringBuilder(flagArray[0].toString());
 
-        if (flagIterator.hasNext()) {
-            appendMore(builder);
+        if (flagArray.length > 1) {
+            appendMore(builder, flagArray.length - 1);
         }
         return builder.toString();
     }
@@ -169,11 +160,7 @@ class IntentAdapter extends BaseAdapter {
         return context.getString(R.string.intent_summary_empty);
     }
 
-    private void appendMore(StringBuilder builder) {
-        builder.append(' ').append(context.getString(R.string.intent_summary_more));
-    }
-
     private void appendMore(StringBuilder builder, Integer count) {
-        builder.append(' ').append(context.getString(R.string.intent_summary_x_more, count));
+        builder.append(' ').append(context.getString(R.string.intent_summary_more, count));
     }
 }

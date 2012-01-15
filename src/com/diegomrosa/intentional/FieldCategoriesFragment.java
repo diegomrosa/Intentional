@@ -1,20 +1,19 @@
 package com.diegomrosa.intentional;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
+import android.widget.ArrayAdapter;
 
-public class FieldDataFragment extends FieldFragment {
+import java.util.Set;
+
+public class FieldCategoriesFragment extends ListFieldFragment {
     private View view;
 
     @Override
     public int getIndex() {
-        return Constants.DATA_IDX;
+        return Constants.CATEGORIES_IDX;
     }
 
     @Override
@@ -31,13 +30,20 @@ public class FieldDataFragment extends FieldFragment {
             // the view hierarchy; it would just never be used.
             return null;
         }
-        view = inflater.inflate(R.layout.field_data_fragment, null);
-        EditText valueEdit = (EditText) view.findViewById(R.id.dataFieldValue);
+        view = inflater.inflate(R.layout.field_categories_fragment, null);
         IntentExt intentExt = getIntentExt();
-        Uri data = (intentExt == null) ? null : intentExt.getData();
-        String dataString = (data == null) ? null : data.toString();
+        Set<String> categories = (intentExt == null) ? null : intentExt.getCategories();
 
-        valueEdit.setText(dataString);
+        if ((categories != null) && !categories.isEmpty()) {
+            String[] categoriesArray = new String[categories.size()];
+            int index = 0;
+
+            for (String category : categories) {
+                categoriesArray[index++] = category;
+            }
+            setListAdapter(new ArrayAdapter<String>(getActivity(),
+                    R.layout.single_line_row, R.id.categoryRow, categoriesArray));
+        }
         return view;
     }
 }

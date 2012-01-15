@@ -20,8 +20,7 @@
 
         <activity android:name=".FieldDetailsActivity" />
 
-        <activity android:name=".ViewIntentActivity"
-                android:label="View Intent">
+        <activity android:name=".ViewIntentActivity">
             <intent-filter>
 
                 <!-- Standard categories. -->

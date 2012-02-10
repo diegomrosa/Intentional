@@ -29,9 +29,9 @@
                 <category android:name="android.intent.category.TAB" />
                 <category android:name="android.intent.category.ALTERNATIVE" />
                 <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
-                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+                <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.INFO" />
-                <!-- <category android:name="android.intent.category.HOME" /> -->
+                <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.PREFERENCE" />
                 <category android:name="android.intent.category.TEST" />
                 <category android:name="android.intent.category.CAR_DOCK" />
@@ -42,13 +42,12 @@
                 <category android:name="android.intent.category.APP_MARKET" />
 
                 <!-- Standard activity actions. -->
-                <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.ATTACH_DATA" />
                 <action android:name="android.intent.action.EDIT" />
                 <action android:name="android.intent.action.PICK" />
-                <action android:name="android.intent.action.CHOOSER" />
+                <!-- <action android:name="android.intent.action.CHOOSER" /> -->
                 <action android:name="android.intent.action.GET_CONTENT" />
                 <action android:name="android.intent.action.DIAL" />
                 <action android:name="android.intent.action.CALL" />
@@ -76,9 +75,9 @@
                 <category android:name="android.intent.category.TAB" />
                 <category android:name="android.intent.category.ALTERNATIVE" />
                 <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
-                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+                <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.INFO" />
-                <!-- <category android:name="android.intent.category.HOME" /> -->
+                <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.PREFERENCE" />
                 <category android:name="android.intent.category.TEST" />
                 <category android:name="android.intent.category.CAR_DOCK" />
@@ -89,13 +88,12 @@
                 <category android:name="android.intent.category.APP_MARKET" />
 
                 <!-- Standard activity actions. -->
-                <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.ATTACH_DATA" />
                 <action android:name="android.intent.action.EDIT" />
                 <action android:name="android.intent.action.PICK" />
-                <action android:name="android.intent.action.CHOOSER" />
+                <!-- <action android:name="android.intent.action.CHOOSER" /> -->
                 <action android:name="android.intent.action.GET_CONTENT" />
                 <action android:name="android.intent.action.DIAL" />
                 <action android:name="android.intent.action.CALL" />
@@ -126,9 +124,9 @@
                 <category android:name="android.intent.category.TAB" />
                 <category android:name="android.intent.category.ALTERNATIVE" />
                 <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
-                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+                <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.INFO" />
-                <!-- <category android:name="android.intent.category.HOME" /> -->
+                <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.PREFERENCE" />
                 <category android:name="android.intent.category.TEST" />
                 <category android:name="android.intent.category.CAR_DOCK" />
@@ -139,13 +137,12 @@
                 <category android:name="android.intent.category.APP_MARKET" />
 
                 <!-- Standard activity actions. -->
-                <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.ATTACH_DATA" />
                 <action android:name="android.intent.action.EDIT" />
                 <action android:name="android.intent.action.PICK" />
-                <action android:name="android.intent.action.CHOOSER" />
+                <!-- <action android:name="android.intent.action.CHOOSER" /> -->
                 <action android:name="android.intent.action.GET_CONTENT" />
                 <action android:name="android.intent.action.DIAL" />
                 <action android:name="android.intent.action.CALL" />
@@ -164,5 +161,7 @@
                 <!-- Match intents with no data. -->
             </intent-filter>
         </activity>
+
+        <activity android:name=".BookmarksActivity" />
     </application>
 </manifest>

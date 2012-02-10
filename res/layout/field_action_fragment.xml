@@ -6,8 +6,8 @@
         android:layout_height="fill_parent">
     <TextView style="@style/fieldViewTitle"
             android:text="@string/action_view_title" />
-    <EditText android:id="@+id/actionFieldValue"
+    <AutoCompleteTextView android:id="@+id/actionFieldValue"
             style="@style/fieldViewEdit"
             android:text=""
-            android:editable="false" />
+            android:editable="true" />
 </LinearLayout>

@@ -96,6 +96,10 @@ public class FieldListFragment extends ListFragment {
         return (ViewIntentActivity) getActivity();
     }
 
+    private IntentAdapter getIntentAdapter() {
+        return getViewIntentActivity().getAdapter();
+    }
+
     private IntentExt getIntentExt() {
         return getViewIntentActivity().getIntentExt();
     }

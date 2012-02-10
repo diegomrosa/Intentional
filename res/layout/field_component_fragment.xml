@@ -11,11 +11,11 @@
     <EditText android:id="@+id/componentPackageEdit"
             style="@style/fieldViewEdit"
             android:text=""
-            android:editable="false" />
+            android:editable="true" />
     <TextView style="@style/fieldViewLabel"
             android:text="@string/component_class_label" />
     <EditText android:id="@+id/componentClassEdit"
             style="@style/fieldViewEdit"
             android:text=""
-            android:editable="false" />
+            android:editable="true" />
 </LinearLayout>

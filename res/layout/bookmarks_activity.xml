@@ -7,19 +7,14 @@
         android:paddingLeft="8dp"
         android:paddingRight="8dp">
     <TextView style="@style/fieldViewTitle"
-            android:text="@string/categories_view_title" />
+            android:text="@string/bookmarks_title" />
     <ListView android:id="@android:id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawSelectorOnTop="false" />
     <TextView android:id="@android:id/empty"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/categories_empty_list"
+            android:layout_height="match_parent"
+            android:text="@string/bookmarks_empty_list"
             android:visibility="invisible" />
-    <Button android:id="@+id/categoryAddButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="@string/categories_add_button" />
 </LinearLayout>

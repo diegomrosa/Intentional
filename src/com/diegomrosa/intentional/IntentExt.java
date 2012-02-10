@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class IntentExt implements Parcelable {
+class IntentExt implements Parcelable {
     private Intent originalIntent;
     private Intent updatedIntent;
     private String inferredFileName;
@@ -50,26 +50,36 @@ public class IntentExt implements Parcelable {
         return updatedIntent.getData();
     }
 
-    public Uri getDataStream() {
-        Uri dataStream = updatedIntent.getData();
+    public void setData(Uri data) {
+        updatedIntent.setData(data);
+    }
 
-        if (dataStream != null) {
-            return dataStream;
-        }
-        dataStream = updatedIntent.getParcelableExtra(Intent.EXTRA_STREAM);
-        return dataStream;
+    public Uri getDataStream() {
+        return Intents.getDataStream(updatedIntent);
     }
 
     public String getType() {
         return updatedIntent.getType();
     }
 
+    public void setType(String type) {
+        updatedIntent.setType(type);
+    }
+
     public String getAction() {
         return updatedIntent.getAction();
     }
 
+    public void setAction(String action) {
+        updatedIntent.setAction(action);
+    }
+
     public Set<String> getCategories() {
         return updatedIntent.getCategories();
+    }
+
+    public void addCategory(String category) {
+        updatedIntent.getCategories().add(category);
     }
 
     public Bundle getExtras() {

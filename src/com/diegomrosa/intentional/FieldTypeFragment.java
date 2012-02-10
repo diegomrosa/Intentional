@@ -2,10 +2,16 @@ package com.diegomrosa.intentional;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+
+import java.util.List;
 
 public class FieldTypeFragment extends FieldFragment {
     private View view;
@@ -30,11 +36,30 @@ public class FieldTypeFragment extends FieldFragment {
             return null;
         }
         view = inflater.inflate(R.layout.field_type_fragment, null);
-        EditText valueEdit = (EditText) view.findViewById(R.id.typeFieldValue);
+        List<Mime.Type> mimeTypes = Mime.getInstance(getActivity()).getTypes();
+        ArrayAdapter<Mime.Type> adapter = new ArrayAdapter<Mime.Type>(getActivity(),
+                android.R.layout.simple_dropdown_item_1line, mimeTypes);
+        AutoCompleteTextView valueView = (AutoCompleteTextView) view.findViewById(R.id.typeFieldValue);
         IntentExt intentExt = getIntentExt();
         String type = (intentExt == null) ? null : intentExt.getType();
 
-        valueEdit.setText(type);
+        valueView.setAdapter(adapter);
+        valueView.setText(type);
+        valueView.addTextChangedListener(new TypeWatcher());
         return view;
+    }
+
+    private class TypeWatcher implements TextWatcher {
+
+        @Override
+        public void beforeTextChanged(CharSequence text, int a, int b, int c) {}
+
+        @Override
+        public void onTextChanged(CharSequence text, int a, int b, int c) {
+            getIntentExt().setType(text.toString());
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {}
     }
 }

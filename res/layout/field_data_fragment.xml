@@ -9,5 +9,5 @@
     <EditText android:id="@+id/dataFieldValue"
             style="@style/fieldViewEdit"
             android:text=""
-            android:editable="false" />
+            android:editable="true" />
 </LinearLayout>

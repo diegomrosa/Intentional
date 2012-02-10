@@ -3,7 +3,7 @@ package com.diegomrosa.intentional;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-public abstract class FieldFragment extends Fragment implements FieldFragmentFace {
+abstract class FieldFragment extends Fragment implements FieldFragmentFace {
 
     @Override
     public IntentExt getIntentExt() {

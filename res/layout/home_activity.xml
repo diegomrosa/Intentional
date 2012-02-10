@@ -4,7 +4,22 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
-    <TextView android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello World, HomeActivity" />
+    <LinearLayout android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <TextView android:id="@+id/bookmarkText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableTop="@drawable/ic_menu_star"
+                android:text="@string/home_bookmarks"
+                android:gravity="center" />
+        <TextView android:id="@+id/aboutText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableTop="@drawable/ic_menu_info_details"
+                android:text="@string/home_about"
+                android:gravity="center" />
+    </LinearLayout>
 </LinearLayout>

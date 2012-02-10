@@ -5,6 +5,10 @@
     <!-- General strings -->
     <string name="app_name">Intentional</string>
 
+    <!-- Home screen -->
+    <string name="home_bookmarks">Bookmarks</string>
+    <string name="home_about">About</string>
+
     <!-- Intent view strings -->
     <string name="intent_error">Error processing intent.</string>
     <string name="intent_title_data">Data</string>
@@ -45,6 +49,11 @@
     <!-- Categories -->
     <string name="categories_view_title">Categories</string>
     <string name="categories_empty_list">No categories.</string>
+    <string name="categories_add_button">Add</string>
+    <string name="categories_add_dialog_title">Add Category</string>
+    <string name="categories_add_dialog_message">Enter category name:</string>
+    <string name="categories_add_dialog_ok">Ok</string>
+    <string name="categories_add_dialog_cancel">Cancel</string>
 
     <!-- Extras -->
     <string name="extras_view_title">Extras</string>
@@ -58,4 +67,8 @@
     <string name="component_view_title">Component</string>
     <string name="component_package_label">Package name:</string>
     <string name="component_class_label">Class name:</string>
+
+    <!-- Bookmarks activity -->
+    <string name="bookmarks_title">Bookmarks</string>
+    <string name="bookmarks_empty_list">No bookmarks.</string>
 </resources>

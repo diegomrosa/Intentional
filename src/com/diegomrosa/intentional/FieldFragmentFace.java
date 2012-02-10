@@ -1,6 +1,6 @@
 package com.diegomrosa.intentional;
 
-public interface FieldFragmentFace {
+interface FieldFragmentFace {
 
     int getIndex();
 

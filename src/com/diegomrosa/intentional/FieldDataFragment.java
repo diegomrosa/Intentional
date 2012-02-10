@@ -4,12 +4,17 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
 public class FieldDataFragment extends FieldFragment {
+    private static final String TAG = FieldDataFragment.class.getSimpleName();
+
     private View view;
 
     @Override
@@ -38,6 +43,26 @@ public class FieldDataFragment extends FieldFragment {
         String dataString = (data == null) ? null : data.toString();
 
         valueEdit.setText(dataString);
+        valueEdit.addTextChangedListener(new DataWatcher());
         return view;
+    }
+
+
+    private class DataWatcher implements TextWatcher {
+
+        @Override
+        public void beforeTextChanged(CharSequence text, int a, int b, int c) {}
+
+        @Override
+        public void onTextChanged(CharSequence text, int a, int b, int c) {
+            Uri newData = Uri.parse(text.toString());
+
+            if (newData != null) {
+                getIntentExt().setData(newData);
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {}
     }
 }

@@ -5,4 +5,6 @@ interface FieldFragmentFace {
     int getIndex();
 
     IntentExt getIntentExt();
+
+    void notifyIntentChanged();
 }

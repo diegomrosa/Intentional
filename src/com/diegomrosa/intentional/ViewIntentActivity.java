@@ -1,5 +1,6 @@
 package com.diegomrosa.intentional;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ComponentName;
@@ -24,9 +25,9 @@ import java.util.Date;
 public class ViewIntentActivity extends FragmentActivity {
     private static final String TAG = ViewIntentActivity.class.getSimpleName();
 
-    private static final String INTENT_EXT_KEY = "intentExt";
+    public static final String INTENT_EXT_KEY = "intentExt";
     private static final int BUFFER_SIZE = 8192;
-    private static final int DIALOG_ID_SAVE = 0;
+    private static final int DIALOG_ID_SAVE = 1;
 
     private IntentAdapter intentAdapter;
 

@@ -79,7 +79,7 @@ class IntentExt implements Parcelable {
     }
 
     public void addCategory(String category) {
-        updatedIntent.getCategories().add(category);
+        updatedIntent.addCategory(category);
     }
 
     public Bundle getExtras() {

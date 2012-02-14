@@ -36,6 +36,11 @@ class IntentAdapter extends BaseAdapter {
         return intentExt;
     }
 
+    public void setIntentExt(IntentExt intentExt) {
+        this.intentExt = intentExt;
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getCount() {
         return Constants.FIELD_COUNT;

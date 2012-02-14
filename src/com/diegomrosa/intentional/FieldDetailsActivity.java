@@ -1,6 +1,7 @@
 package com.diegomrosa.intentional;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -29,6 +30,11 @@ public class FieldDetailsActivity extends FragmentActivity {
             Fragment fieldFragment = FieldFragment.getFragment(index, extras);
 
             getSupportFragmentManager().beginTransaction().add(android.R.id.content, fieldFragment).commit();
+            IntentExt newIntentExt = ((FieldFragmentFace) fieldFragment).getIntentExt();
+            Intent resultIntent = new Intent();
+
+            resultIntent.putExtra(Constants.INTENT_EXT_EXTRA, newIntentExt);
+            setResult(Activity.RESULT_OK, resultIntent);
         }
     }
 }

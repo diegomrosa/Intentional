@@ -51,9 +51,9 @@
     <string name="categories_empty_list">No categories.</string>
     <string name="categories_add_button">Add</string>
     <string name="categories_add_dialog_title">Add Category</string>
-    <string name="categories_add_dialog_message">Enter category name:</string>
     <string name="categories_add_dialog_ok">Ok</string>
     <string name="categories_add_dialog_cancel">Cancel</string>
+    <string name="categories_delete_item">Delete</string>
 
     <!-- Extras -->
     <string name="extras_view_title">Extras</string>

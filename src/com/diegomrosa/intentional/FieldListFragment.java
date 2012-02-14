@@ -1,5 +1,6 @@
 package com.diegomrosa.intentional;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.widget.ListView;
 
 public class FieldListFragment extends ListFragment {
     private static final String CURRENT_SELECTED_FIELD_KEY = "currentSelectedField";
+    private static final int EDIT_FIELD_REQUEST_CODE = 1;
 
     private boolean mDualPane;
     private int mCurrentSelectedField = 0;
@@ -88,16 +90,23 @@ public class FieldListFragment extends ListFragment {
             intent.setClass(getActivity(), FieldDetailsActivity.class);
             intent.putExtra(Constants.INTENT_EXT_EXTRA, getIntentExt());
             intent.putExtra(Constants.FIELD_INDEX_EXTRA, Integer.valueOf(index));
-            startActivity(intent);
+            startActivityForResult(intent, EDIT_FIELD_REQUEST_CODE);
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == EDIT_FIELD_REQUEST_CODE) {
+            if (resultCode == Activity.RESULT_OK) {
+                IntentExt newIntent = data.getParcelableExtra(Constants.INTENT_EXT_EXTRA);
+
+                getViewIntentActivity().getAdapter().setIntentExt(newIntent);
+            }
         }
     }
 
     private ViewIntentActivity getViewIntentActivity() {
         return (ViewIntentActivity) getActivity();
-    }
-
-    private IntentAdapter getIntentAdapter() {
-        return getViewIntentActivity().getAdapter();
     }
 
     private IntentExt getIntentExt() {
